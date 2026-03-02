@@ -3,9 +3,7 @@
 require 'Reader.php';
 
 $reader = new Reader ("jean.dupont" , "mdp125");
-$data = (array) $reader;
-echo "Email : " . array_values($data)[0];
-echo "Mot de passe : " . array_values($data)[1];
+print_r ($reader->login());
 
 $reader = new Reader("jean.dupont@test.com", "mdp123");
 $reader->addBookToFavorites("Harry Potter 1");
